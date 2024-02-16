@@ -1,32 +1,67 @@
-# Mintlify Starter Kit
+# Worth API docs
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+**Description**
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+Steps to run project locally
 
-### Development
+> ⚠️ **Prerequisite:** Please install Node.js (version 21 or higher) before proceeding.
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
+If you are using a Node.js version earlier than 21, please follow these below steps. Otherwise, you can directly proceed to the installation instructions.
 
+1. Install nvm
+2. Run command
 ```
-npm i -g mintlify
+nvm install 21.0.0
+```
+3. After installation use
+```
+nvm use 21.0.0
+```
+4. Check node version with ```node -v```
+
+If you see `21.0.0`, you are good to go!
+
+## Installation
+
+Download the Mintlify CLI using the following command
+```
+npm i mintlify -g
 ```
 
-Run the following command at the root of your documentation (where mint.json is)
+Check if mintlify is installed or not using ```mintlify -v```
+
+After installing Mintlify, you can proceed to the next step.
+
+## Development
+
+Execute the following command to run the mintlify project locally:
+
+> ⚠️ **Warning:** Ensure that you are in the root directory of your `mint.json` file.
 
 ```
 mintlify dev
 ```
 
-### Publishing Changes
+Mintlify by default runs at port `3000`, so local preview of it can be found at `http://localhost:3000`
 
-Install our Github App to autopropagate changes from youre repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
+You can customize the port Mintlify runs on by using the `--port` flag. To run Mintlify on port 3333, for instance, use this command:
 
-#### Troubleshooting
+```
+mintlify dev --port 3333
+```
 
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `mint.json`
+### API Endpoints
+
+To add your own api endpoints use below command:
+
+```
+npx @mintlify/scraping@latest openapi-file <path-of-open-api-json-file> -o <path-to-folder-to-extract-json-file-data>
+```
+
+For example:
+```
+npx @mintlify/scraping@latest openapi-file open-api/file -o api-reference/folder
+```
+
+## Summary
+Now you're all set towork with Mintlify locally. Happy coding!
