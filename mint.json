@@ -1,29 +1,31 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
-  "favicon": "/favicon.svg",
-  "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
-    }
-  },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
+  "name": "Worth",
+  "openapi": [
+    "openapi/auth.json",
+    "openapi/case.json",
+    "openapi/integration.json",
+    "openapi/manual-score.json"
   ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+  "logo": {
+    "dark": "/logo/worth-horizontal-logo-dark.svg",
+    "light": "/logo/worth-horizontal-logo-light.svg"
+  },
+  "favicon": "/logo/favicon-logo.jpg",
+  "colors": {
+    "primary": "#3B2FC9",
+    "light": "#6673FF",
+    "dark": "#3B2FC9",
+    "background": {
+      "dark": "#0f1117",
+      "light": "#fff"
+    }
+  },
+  "modeToggle": {
+    "default": "dark"
+  },
+  "search": {
+    "prompt": "Search Worth api's..."
   },
   "tabs": [
     {
@@ -31,61 +33,80 @@
       "url": "api-reference"
     }
   ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
+  "primaryTab": {
+    "name": "Documentation"
+  },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Welcome",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "introduction"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Sign In",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "api-reference/auth/sign-in/customer-sign-in",
+        "api-reference/auth/refresh-token/customer-refresh-token",
+        "api-reference/auth/logout/customer-logout"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Forgot Password",
       "pages": [
-        "api-reference/introduction"
+        "api-reference/auth/forgot-password/forgot-password-init",
+        "api-reference/auth/forgot-password/reset-password"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Invitations",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/auth/invites/invite-business",
+        "api-reference/auth/invites/accept-invitation"
+      ]
+    },
+    {
+      "group": "Customers",
+      "pages": [
+        "api-reference/auth/customers/get-customer-subroles"
+      ]
+    },
+    {
+      "group": "Customer Users",
+      "pages": [
+        "api-reference/auth/customer-users/get-customer-users",
+        "api-reference/auth/customer-users/create-customer-user",
+        "api-reference/auth/customer-users/get-customer-user-by-id",
+        "api-reference/auth/customer-users/update-customer-user-by-id",
+        "api-reference/auth/customer-users/customer-user-resend-invitation"
+      ]
+    },
+    {
+      "group": "Business",
+      "pages": [
+        "api-reference/case/businesses/get-customer-businesses",
+        "api-reference/case/businesses/get-business-cases",
+        "api-reference/case/cases/get-customer-case-by-id",
+        "api-reference/case/businesses/get-business-by-id"
+      ]
+    },
+    {
+      "group": "Cases",
+      "pages": [
+        "api-reference/case/cases/get-customer-cases",
+        "api-reference/case/cases/get-customer-case-by-id"
+      ]
+    },
+    {
+      "group": "Case Details",
+      "pages": [
+        "api-reference/manual-score/score/get-case-score",
+        "api-reference/integration/banking/banking-information",
+        "api-reference/integration/accounting/get-reports",
+        "api-reference/integration/taxation/tax-filing",
+        "api-reference/integration/public-records/public-records"
       ]
     }
   ],
-  "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
-  }
+  "footerSocials": {}
 }
