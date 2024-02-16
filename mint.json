@@ -2,10 +2,10 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Worth",
   "openapi": [
-    "open-api/auth.json",
-    "open-api/case.json",
-    "open-api/integration.json",
-    "open-api/manual-score.json"
+    "openapi/auth.json",
+    "openapi/case.json",
+    "openapi/integration.json",
+    "openapi/manual-score.json"
   ],
   "logo": {
     "dark": "/logo/worth-horizontal-logo-dark.svg",

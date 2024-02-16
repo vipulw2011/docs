@@ -55,12 +55,12 @@ mintlify dev --port 3333
 To add your own api endpoints use below command:
 
 ```
-npx @mintlify/scraping@latest openapi-file <path-of-open-api-json-file> -o <path-to-folder-to-extract-json-file-data>
+npx @mintlify/scraping@latest openapi-file <path-of-openapi-json-file> -o <path-to-folder-to-extract-json-file-data>
 ```
 
 For example:
 ```
-npx @mintlify/scraping@latest openapi-file open-api/file -o api-reference/folder
+npx @mintlify/scraping@latest openapi-file openapi/file -o api-reference/folder
 ```
 
 ## Summary
